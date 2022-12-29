@@ -6,7 +6,7 @@
 /*   By: rsung <rsung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 10:28:55 by rsung             #+#    #+#             */
-/*   Updated: 2022/12/23 15:26:29 by rsung            ###   ########.fr       */
+/*   Updated: 2022/12/29 16:25:23 by rsung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,7 +168,7 @@ namespace	ft
 				iterator	it = lower_bound(key);
 
 				if (it == end() || _comp(key, (*it).first))
-					throw (std::out_of_range("map: out of range"));
+					throw (std::out_of_range("map::at"));
 				return ((*it).second);
 			}
 			const T& at(const Key& key) const
@@ -176,7 +176,7 @@ namespace	ft
 				const_iterator	it = lower_bound(key);
 
 				if (it == end() || _comp(key, (*it).first))
-					throw (std::out_of_range("map: out of range"));
+					throw (std::out_of_range("map::at"));
 				return ((*it).second);
 			}
 
